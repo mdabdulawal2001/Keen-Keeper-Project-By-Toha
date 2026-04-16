@@ -4,6 +4,7 @@ import FriendCard from "../components/FriendCard/FriendCard";
 import TimelineItem from "../components/TimelineItem/TimelineItem";
 import StatsCard from "../components/StatsCard/StatsCard";
 import Home from "../pages/Home/Home";
+import FriendDetails from "../pages/FriendDetails/FriendDetails";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,15 @@ export const router = createBrowserRouter([
         loader: async () => {
           const res = await fetch("/friends.json");
           return res.json();
+        },
+      },
+      {
+        path: "/friend/:id",
+        Component: FriendDetails,
+        loader: async ({ params }) => {
+          const res = await fetch("/friends.json");
+          const data = await res.json();
+          return data.find((item) => item.id == params.id);
         },
       },
       {
