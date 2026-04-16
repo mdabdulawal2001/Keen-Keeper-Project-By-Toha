@@ -18,7 +18,7 @@
     "email": "m.chen@example.com",
     "days_since_contact": 20,
     "status": "overdue",
-    "tags": ["work", "mentor"],
+    "tags": ["work"],
     "bio": "Former senior dev at my first internship. Great at explaining complex backend architecture.",
     "goal": 14,
     "next_due_date": "2026-04-10"
@@ -42,7 +42,7 @@
     "email": "david.s88@example.com",
     "days_since_contact": 45,
     "status": "overdue",
-    "tags": ["gym", "hobby"],
+    "tags": ["gym"],
     "bio": "Training partner for the marathon last year. Expert in nutrition and high-intensity workouts.",
     "goal": 14,
     "next_due_date": "2026-03-15"
@@ -66,7 +66,7 @@
     "email": "liam.oc@example.com",
     "days_since_contact": 60,
     "status": "overdue",
-    "tags": ["college", "music"],
+    "tags": ["college"],
     "bio": "Played in a jazz band together in college. Incredible saxophonist and vinyl collector.",
     "goal": 30,
     "next_due_date": "2026-03-01"
