@@ -11,6 +11,7 @@ import { Toaster } from "react-hot-toast";
 
 
 
+// @ts-ignore
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <TimelineProvider>

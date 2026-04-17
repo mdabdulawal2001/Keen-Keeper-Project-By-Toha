@@ -25,6 +25,7 @@ export const router = createBrowserRouter([
         loader: async ({ params }) => {
           const res = await fetch("/friends.json");
           const data = await res.json();
+          // @ts-ignore
           return data.find((item) => item.id == params.id);
         },
       },

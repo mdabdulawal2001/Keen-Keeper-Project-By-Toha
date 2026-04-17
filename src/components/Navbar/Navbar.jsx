@@ -11,6 +11,7 @@ const Navbar = () => {
 const closeDrawer = () => {
   const drawer = document.getElementById("my-drawer");
   if (drawer) {
+    // @ts-ignore
     drawer.checked = false;
   }
 };

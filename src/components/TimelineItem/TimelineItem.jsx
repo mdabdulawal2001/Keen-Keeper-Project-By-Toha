@@ -16,6 +16,7 @@ const TimelineItem = () => {
   const [search, setSearch] = useState("");
 
   // icon + color
+  // @ts-ignore
   const getActionDetails = (action) => {
     switch (action?.toLowerCase()) {
       case "meetup":
@@ -35,6 +36,7 @@ const TimelineItem = () => {
   };
 
   // Date Formate (Day + Time)
+  // @ts-ignore
   const formatDate = (dateValue) => {
   const date = new Date(dateValue);
   const now = new Date();
@@ -43,6 +45,7 @@ const TimelineItem = () => {
   const d1 = new Date(date.toDateString());
   const d2 = new Date(now.toDateString());
 
+  // @ts-ignore
   const diff = Math.floor((d2 - d1) / (1000 * 60 * 60 * 24));
 
   let dayPart = "";

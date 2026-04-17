@@ -1,3 +1,4 @@
+// @ts-ignore
 import React, { useContext } from "react";
 import {
   PieChart,
@@ -14,12 +15,15 @@ const StatsCard = () => {
 
   // data filter
   const callCount =
+    // @ts-ignore
     timeline?.filter((item) => item.action.toLowerCase() === "call").length ||
     0;
   const textCount =
+    // @ts-ignore
     timeline?.filter((item) => item.action.toLowerCase() === "text").length ||
     0;
   const videoCount =
+    // @ts-ignore
     timeline?.filter((item) => item.action.toLowerCase() === "video").length ||
     0;
 

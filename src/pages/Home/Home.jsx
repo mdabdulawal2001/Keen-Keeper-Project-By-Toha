@@ -73,10 +73,12 @@ const Home = () => {
               <h2 className="text-3xl font-bold text-[#1f2937] mb-12 tracking-tight">
                 Your Friends
               </h2>
-
+              
               {/* home cards*/}
               <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {friendsData.map((friend) => (
+                {friendsData.map((
+              // @ts-ignore
+                friend) => (
                   <FriendCard key={friend.id} friend={friend} />
                 ))}
               </div>

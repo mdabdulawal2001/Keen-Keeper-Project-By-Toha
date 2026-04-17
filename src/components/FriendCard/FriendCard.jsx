@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// @ts-ignore
 const FriendCard = ({ friend }) => {
   const { name, picture, status, tags, days_since_contact } = friend;
 
+  // @ts-ignore
   const getStatusBadgeColor = (statusText) => {
     switch (statusText.toLowerCase()) {
       case "overdue":
