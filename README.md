@@ -16,13 +16,25 @@
 
 ### 📸 Screenshots
 
-
-
 <p align="center">
-  <img alt="Dashboard" src="https://github.com/user-attachments/assets/ab3d1c28-5853-465c-badd-90d23ea8cd04" width="48%" />
-  <img alt="Friend Profile" src="https://github.com/user-attachments/assets/f00b6ffc-7a96-4b70-b106-61ec7df93ebd" width="48%" />
+  <img width="1217" height="562" alt="Screenshot 2026-04-17 192734" src="https://github.com/user-attachments/assets/6b67a05c-6eef-468a-b91c-516cfc1e8ab2" />
 </p>
 
+<p align="center">
+  <img width="1098" height="450" alt="Screenshot 2026-04-17 192301" src="https://github.com/user-attachments/assets/51fe2c1f-1f50-424f-a9d1-53b62709688e" />
+</p>
+
+<p align="center">
+  <img width="972" height="517" alt="Screenshot 2026-04-17 192419" src="https://github.com/user-attachments/assets/0d45f953-a586-48ac-bfcd-6d297aa1e6dc" />
+</p>
+
+<p align="center">
+  <img width="1240" height="561" alt="Screenshot 2026-04-17 192528" src="https://github.com/user-attachments/assets/af94a9c6-7e48-4b31-a582-7542a0c9c7bb" />
+</p>
+
+<p align="center">
+  <img width="1222" height="573" alt="Screenshot 2026-04-17 192559" src="https://github.com/user-attachments/assets/5636d1c5-2385-44d0-973f-158fab76fd20" />
+</p>
 
 
 ---
