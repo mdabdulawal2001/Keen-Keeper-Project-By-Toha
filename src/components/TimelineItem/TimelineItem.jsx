@@ -12,7 +12,7 @@ const TimelineItem = () => {
   const { timeline } = useContext(TimelineContext);
 
   const [filter, setFilter] = useState("all");
-  const [sort, setSort] = useState("newest");
+  const [sort, setSort] = useState("sort");
   const [search, setSearch] = useState("");
 
   // icon + color
@@ -138,6 +138,7 @@ const TimelineItem = () => {
             onChange={(e) => setSort(e.target.value)}
             className="h-10 select select-bordered select-sm w-full bg-white"
           >
+            <option disabled value="sort">Sort</option>
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>
           </select>
