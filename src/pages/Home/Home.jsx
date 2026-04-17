@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div>
       {/* title part */}
-      <section className="bg-[#f7fdfb] py-20 px-6 font-sans">
+      <section className="bg-[#f7fdfb] py-10 px-6 font-sans">
         <div className="container mx-auto flex flex-col items-center text-center">
           {/* header and description */}
           <div className="max-w-3xl mb-12">
@@ -70,12 +70,12 @@ const Home = () => {
           {/* all friends part */}
           <section className="bg-[#f7fdfb] py-16 md:py-24 px-6 md:px-10 font-sans">
             <div className="max-w-7xl mx-auto flex flex-col items-start">
-              {/* সেকশন হেডিং */}
+              {/* heading */}
               <h2 className="text-3xl font-bold text-[#1f2937] mb-12 tracking-tight">
                 Your Friends
               </h2>
 
-              {/* কার্ডের গ্রিড - পুরোপুরি রেসপনসিভ */}
+              {/* home cards*/}
               <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {friendsData.map((friend) => (
                   <FriendCard key={friend.id} friend={friend} />

@@ -7,12 +7,15 @@ import { RouterProvider } from "react-router-dom";
 // @ts-ignore
 import { router } from "./routes/Routes";
 import TimelineProvider from "./context/TimelineContext";
+import { Toaster } from "react-hot-toast";
+
 
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <TimelineProvider>
       <RouterProvider router={router}></RouterProvider>
+      <Toaster></Toaster>
     </TimelineProvider>
   </StrictMode>
 );

@@ -14,11 +14,11 @@ import {
   HiOutlinePencilSquare,
 } from "react-icons/hi2";
 import { useLoaderData } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const FriendDetails = () => {
   const { addTimeline } = useContext(TimelineContext);
   
-  const navigate = useNavigate();
 
   const FriendDetailsData = useLoaderData();
 
@@ -52,11 +52,12 @@ const FriendDetails = () => {
   const newData = {
     name,
     action: type,
-    date: new Date().toLocaleDateString(),
+    date: Date.now(),
   };
 
   addTimeline(newData);
-  navigate("/time-line-item");
+  // toast message
+  toast.success(`${type} with ${name}`);
 };
 
   return (
