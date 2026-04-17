@@ -72,7 +72,7 @@ const closeDrawer = () => {
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full navbar bg-white px-4 md:px-10 border-b border-gray-100 shadow-sm min-h-20">
+        <div className="w-full navbar bg-white px-4 md:px-10 border-gray-100 min-h-20">
           {/* left part */}
           <div className="flex-1 px-2 mx-2 text-3xl font-bold tracking-tight">
             <Link to="/">

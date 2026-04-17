@@ -32,7 +32,7 @@ const Home = () => {
           </div>
 
           {/* cards */}
-          <div className="lg:w-[90%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="w-full lg:w-[90%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* card 1 */}
             <div className="bg-white p-12 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center">
               <div className="text-7xl font-bold text-[#1f2937] mb-4">10</div>
@@ -68,8 +68,8 @@ const Home = () => {
           <div className="divider w-[90%] mx-auto mt-12"></div>
 
           {/* all friends part */}
-          <section className="bg-[#f7fdfb] py-16 md:py-24 px-6 md:px-10 font-sans">
-            <div className="max-w-7xl mx-auto flex flex-col items-start">
+          <section className="w-full bg-[#f7fdfb] py-16 md:py-24 px-0 md:px-10 font-sans">
+            <div className="max-w-7xl w-full mx-auto flex flex-col items-start">
               {/* heading */}
               <h2 className="text-3xl font-bold text-[#1f2937] mb-12 tracking-tight">
                 Your Friends

@@ -42,12 +42,12 @@ const StatsCard = () => {
       <div className="my-8 md:mt-10 md:mb-20 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
       {/* header */}
       <div className="mb-8">
-        <p className="text-[#2D5243] font-bold text-sm mb-1">
+        <p className="text-xl text-[#2D5243] font-bold mb-1">
           By Interaction Type
         </p>
       </div>
 
-      <div className="h-75 w-full flex items-center justify-center">
+      <div className="h-40 md:h-75 w-full flex items-center justify-center">
         {hasData ? (
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
@@ -90,9 +90,9 @@ const StatsCard = () => {
             </PieChart>
           </ResponsiveContainer>
         ) : (
-          <div className="text-gray-400 text-center italic">
-            <p>No activity data available</p>
-            <p className="text-xs">Start interacting to see your analytics</p>
+          <div className="text-gray-500 text-center italic space-y-4">
+            <p className="text-2xl md:text-3xl">No activity data available</p>
+            <p className="text-sm md:text-lg">Start interacting to see your analytics</p>
           </div>
         )}
       </div>

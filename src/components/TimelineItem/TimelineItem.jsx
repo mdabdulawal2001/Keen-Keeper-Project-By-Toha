@@ -15,7 +15,7 @@ const TimelineItem = () => {
   const [sort, setSort] = useState("newest");
   const [search, setSearch] = useState("");
 
-  // ICON + COLOR
+  // icon + color
   const getActionDetails = (action) => {
     switch (action?.toLowerCase()) {
       case "meetup":
@@ -34,7 +34,7 @@ const TimelineItem = () => {
     }
   };
 
-  // DATE FORMAT (Day + Time)
+  // Date Formate (Day + Time)
   const formatDate = (dateValue) => {
   const date = new Date(dateValue);
   const now = new Date();
@@ -72,15 +72,15 @@ const TimelineItem = () => {
   return `${dayPart}, ${time}`;
 };
 
-  // COPY ARRAY
+  // copy array
   let filteredTimeline = [...(timeline || [])];
 
-  // SEARCH FILTER (SAFE)
+  // search
   filteredTimeline = filteredTimeline.filter((item) =>
     item.name?.toLowerCase().includes(search)
   );
 
-  // ACTION FILTER
+  // action filter
   if (filter !== "all") {
     filteredTimeline = filteredTimeline.filter(
       (item) => item.action?.toLowerCase() === filter
@@ -93,34 +93,35 @@ const TimelineItem = () => {
   );
 
   return (
-    <section className="bg-[#f7fdfb] py-10 px-4 md:px-10 font-sans min-h-screen">
+    <div>
+      <section className="bg-[#f7fdfb] py-10 px-4 md:px-10 font-sans min-h-screen">
       <div className="max-w-4xl mx-auto flex flex-col gap-6">
 
-        {/* TITLE */}
+        {/* title */}
         <h1 className="text-3xl font-bold text-gray-800 mb-4">
           Timeline
         </h1>
 
-        {/* CONTROLS */}
+        {/* controls */}
         <div className="flex flex-col md:flex-row flex-1 w-full md:w-[50%] gap-3 mb-4">
 
             <div>
-                {/* SEARCH */}
+                {/* search */}
           <input
             type="text"
             placeholder="Search by name..."
             value={search}
             onChange={(e) => setSearch(e.target.value.toLowerCase())}
-            className="input input-bordered w-full h-[40px]"
+            className="input input-bordered w-full h-10"
           />
             </div>
 
           <div className="flex flex-2 gap-3">
-            {/* FILTER */}
+            {/* filter */}
           <select
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
-            className="h-[40px] select select-bordered select-sm w-full bg-white"
+            className="h-10 select select-bordered select-sm w-full bg-white"
           >
             <option value="all">All</option>
             <option value="text">Text</option>
@@ -128,11 +129,11 @@ const TimelineItem = () => {
             <option value="video">Video</option>
           </select>
 
-          {/* SORT */}
+          {/* sort */}
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value)}
-            className="h-[40px] select select-bordered select-sm w-full bg-white"
+            className="h-10 select select-bordered select-sm w-full bg-white"
           >
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>
@@ -140,17 +141,17 @@ const TimelineItem = () => {
           </div>
         </div>
 
-        {/* CONTENT */}
+        {/* content */}
         <div className="flex flex-col gap-4">
 
-          {/* EMPTY STATE */}
+          {/* empty stats */}
           {filteredTimeline.length === 0 ? (
             <div className="bg-white p-16 rounded-3xl border border-dashed border-gray-200 flex flex-col items-center justify-center text-center">
-              <HiOutlineXCircle className="text-6xl text-gray-200 mb-4" />
-              <h3 className="text-xl font-semibold text-gray-400">
+              <HiOutlineXCircle className="text-6xl text-gray-500 mb-4" />
+              <h3 className="text-xl font-semibold text-gray-500">
                 No History Yet
               </h3>
-              <p className="text-gray-300 text-sm mt-2">
+              <p className="text-gray-400 text-sm mt-2">
                 When you interact with friends, history will appear here.
               </p>
             </div>
@@ -165,12 +166,12 @@ const TimelineItem = () => {
                 >
                   <div className="flex items-center gap-5">
 
-                    {/* ICON */}
+                    {/* icon */}
                     <div className={`text-3xl ${color}`}>
                       {icon}
                     </div>
 
-                    {/* TEXT */}
+                    {/* text */}
                     <div>
                       <p className="text-gray-600 font-medium">
                         <span className="font-bold text-gray-800">
@@ -183,16 +184,15 @@ const TimelineItem = () => {
                         {formatDate(item.date)}
                       </p>
                     </div>
-
                   </div>
                 </div>
               );
             })
           )}
         </div>
-
       </div>
     </section>
+    </div>
   );
 };
 

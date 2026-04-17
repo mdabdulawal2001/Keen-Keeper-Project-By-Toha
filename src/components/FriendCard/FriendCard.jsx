@@ -20,7 +20,7 @@ const FriendCard = ({ friend }) => {
   return (
     <div>
       <Link to={`/friend/${friend.id}`}>
-        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md hover:-translate-y-1 text-center">
+        <div className="h-90 bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-md hover:-translate-y-1 text-center">
           {/* picture */}
           <div className="avatar mb-6">
             <div className="w-24 rounded-full ring-2 ring-[#2D5243]/20 ring-offset-base-100 ring-offset-2">

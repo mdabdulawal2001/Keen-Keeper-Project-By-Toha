@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "ESNext",
     "target": "ES6",
-    "jsx": "react", 
+    "jsx": "react-jsx", 
     "checkJs": true
   },
   "exclude": ["node_modules", "dist"]
