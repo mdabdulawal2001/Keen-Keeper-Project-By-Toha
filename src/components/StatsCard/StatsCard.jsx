@@ -34,7 +34,12 @@ const StatsCard = () => {
   const hasData = callCount > 0 || textCount > 0 || videoCount > 0;
 
   return (
-    <div className="my-8 md:mt-10 md:mb-20 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm w-[95%] md:w-full max-w-4xl mx-auto">
+    <div className="w-[95%] md:w-full max-w-4xl mx-auto mt-15">
+                    {/* TITLE */}
+        <h1 className="flex justify-center md:justify-start text-3xl font-bold text-gray-800 mb-4">
+          Friendship Analytics
+        </h1>
+      <div className="my-8 md:mt-10 md:mb-20 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm">
       {/* header */}
       <div className="mb-8">
         <p className="text-[#2D5243] font-bold text-sm mb-1">
@@ -91,6 +96,7 @@ const StatsCard = () => {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 };

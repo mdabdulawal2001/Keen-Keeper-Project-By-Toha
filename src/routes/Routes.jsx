@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
-import FriendCard from "../components/FriendCard/FriendCard";
 import TimelineItem from "../components/TimelineItem/TimelineItem";
 import StatsCard from "../components/StatsCard/StatsCard";
 import Home from "../pages/Home/Home";
 import FriendDetails from "../pages/FriendDetails/FriendDetails";
+import NotFound from "../pages/NotFound/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -35,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: "stats",
         Component: StatsCard,
+      },
+      {
+        path: "*",
+        Component: NotFound,
       },
     ],
   },

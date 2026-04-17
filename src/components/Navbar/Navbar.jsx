@@ -8,11 +8,18 @@ import { ImStatsDots } from "react-icons/im";
 import { CgMenu } from "react-icons/cg";
 
 const Navbar = () => {
+const closeDrawer = () => {
+  const drawer = document.getElementById("my-drawer");
+  if (drawer) {
+    drawer.checked = false;
+  }
+};
   const navLinks = (
     <>
       <li>
         <NavLink
           to="/"
+          onClick={closeDrawer}
           className={({ isActive }) =>
             `flex items-center gap-2 px-6 py-3 rounded-lg text-[17px] font-semibold transition-colors duration-200 
             ${
@@ -28,6 +35,7 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/time-line-item"
+          onClick={closeDrawer}
           className={({ isActive }) =>
             `flex items-center gap-2 px-6 py-3 rounded-xl text-base font-semibold transition-colors duration-200 
             ${
@@ -43,6 +51,7 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/stats"
+          onClick={closeDrawer}
           className={({ isActive }) =>
             `flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-colors duration-200 text-base
             ${
