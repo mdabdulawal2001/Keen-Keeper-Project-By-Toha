@@ -1,6 +1,7 @@
 # 🧑‍🤝‍🧑 KeenKeeper — Keep Your Friendships Alive
 
 ### 📝 Project Overview
+
 **KeenKeeper** is a modern React-based friendship management application designed to help users maintain meaningful relationships. It allows users to track friends, view detailed profiles, log interactions (Call, Text, Video), and visualize communication history using a timeline and analytics dashboard. This project serves as a practical implementation of React concepts including state management, routing, and the Context API.
 
 <p align="center">
@@ -57,10 +58,11 @@
 ---
 
 ### 📦 Dependencies Used
+
 The following libraries were used to build this application:
 
 - `react-router-dom`: For declarative routing.
-- `react-toastify`: For elegant popup notifications.
+- `react-hot-toast`: For elegant popup notifications.
 - `react-icons`: For high-quality vector icons.
 - `recharts`: For the analytics dashboard.
 - `daisyui`: For pre-designed UI components.
@@ -68,6 +70,7 @@ The following libraries were used to build this application:
 ---
 
 ### 🧠 What I Learned
+
 - **Global State Management:** Implementing **Context API** to handle data across the entire app without prop drilling.
 - **Advanced Routing:** Managing dynamic parameters and nested routes with **React Router**.
 - **Data Visualization:** Transforming raw interaction logs into visual insights using **Recharts**.
@@ -81,20 +84,30 @@ The following libraries were used to build this application:
 Follow these steps to set up the project on your local machine:
 
 1. **Clone the repository:**
+
    ```bash
    git clone [https://github.com/mdabdulawal2001/Keen-Keeper-Project-By-Toha.git](https://github.com/mdabdulawal2001/Keen-Keeper-Project-By-Toha.git)
 
+   ```
+
 2. **Navigate to the project folder:**
+
    ```Bash
    cd Keen-Keeper-Project-By-Toha
 
+   ```
+
 3. **Install all dependencies:**
+
    ```Bash
-   npm install 
+   npm install
+
+   ```
 
 4. **Start the development server:**
-    ```Bash
-    npm run dev
+   ```Bash
+   npm run dev
+   ```
 
 ---
 

@@ -6,7 +6,7 @@ import {
 } from "react-icons/hi";
 import { ImStatsDots } from "react-icons/im";
 import { CgMenu } from "react-icons/cg";
-import image from '../../assets/logo.png'
+import image from '../../assets/logo.png';
 
 const Navbar = () => {
 const closeDrawer = () => {
