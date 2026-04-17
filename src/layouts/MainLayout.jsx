@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar/Navbar";
 import { Outlet, useNavigation } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
@@ -6,8 +6,16 @@ import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 
 const MainLayout = () => {
   const navigation = useNavigation();
-  navigation.state === "loading";
   const isLoading = navigation.state === "loading";
+
+  useEffect(() => {
+    if (navigation.state === "loading") {
+      window.scrollTo({
+        top: 0,
+        behavior: "instant",
+      });
+    }
+  }, [navigation.state]);
 
   return (
     <div>
@@ -20,7 +28,7 @@ const MainLayout = () => {
 
       <div>
         {isLoading ? (
-          <div className="flex justify-center items-center py-20">
+          <div className="min-h-[calc(100vh-160px)] flex justify-center items-center py-20">
             <span className="loading loading-spinner loading-lg text-[#2D5243]"></span>
           </div>
         ) : (

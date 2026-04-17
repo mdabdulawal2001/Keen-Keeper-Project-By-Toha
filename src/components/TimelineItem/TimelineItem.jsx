@@ -47,7 +47,6 @@ const TimelineItem = () => {
 
   // @ts-ignore
   const diff = Math.floor((d2 - d1) / (1000 * 60 * 60 * 24));
-
   let dayPart = "";
 
   if (diff === 0) {
@@ -90,7 +89,7 @@ const TimelineItem = () => {
     );
   }
 
-  // SORT (FAST & CLEAN)
+  // sort
   filteredTimeline.sort((a, b) =>
     sort === "newest" ? b.date - a.date : a.date - b.date
   );
