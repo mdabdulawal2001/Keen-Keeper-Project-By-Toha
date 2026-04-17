@@ -6,9 +6,13 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 // @ts-ignore
 import { router } from "./routes/Routes";
+import TimelineProvider from "./context/TimelineContext";
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <TimelineProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </TimelineProvider>
   </StrictMode>
 );

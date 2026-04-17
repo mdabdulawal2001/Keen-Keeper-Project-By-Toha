@@ -1,4 +1,7 @@
 import React from "react";
+import { useContext } from "react";
+import { TimelineContext } from "../../context/TimelineContext";
+import { useNavigate } from "react-router-dom";
 import {
   HiOutlineBell,
   HiOutlinePhone,
@@ -13,6 +16,10 @@ import {
 import { useLoaderData } from "react-router-dom";
 
 const FriendDetails = () => {
+  const { addTimeline } = useContext(TimelineContext);
+  
+  const navigate = useNavigate();
+
   const FriendDetailsData = useLoaderData();
 
   const {
@@ -39,6 +46,18 @@ const FriendDetails = () => {
         return "bg-gray-100 text-gray-700"; // Default
     }
   };
+
+  const handleAction = (type) => {
+  console.log(type);
+  const newData = {
+    name,
+    action: type,
+    date: new Date().toLocaleDateString(),
+  };
+
+  addTimeline(newData);
+  navigate("/time-line-item");
+};
 
   return (
     <div>
@@ -146,15 +165,15 @@ const FriendDetails = () => {
                 Quick Check-In
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <button className="btn bg-[#f8fafc] hover:bg-gray-100 border-none rounded-2xl h-24 flex flex-col gap-2 normal-case">
+                <button onClick={()=> handleAction("call")} className="btn bg-[#f8fafc] hover:bg-gray-100 border-none rounded-2xl h-24 flex flex-col gap-2 normal-case">
                   <HiOutlinePhone className="text-3xl text-gray-600" />
                   <span className="text-gray-700">Call</span>
                 </button>
-                <button className="btn bg-[#f8fafc] hover:bg-gray-100 border-none rounded-2xl h-24 flex flex-col gap-2 normal-case">
+                <button onClick={()=> handleAction("text")} className="btn bg-[#f8fafc] hover:bg-gray-100 border-none rounded-2xl h-24 flex flex-col gap-2 normal-case">
                   <HiOutlineChatBubbleLeftRight className="text-3xl text-gray-600" />
                   <span className="text-gray-700">Text</span>
                 </button>
-                <button className="btn bg-[#f8fafc] hover:bg-gray-100 border-none rounded-2xl h-24 flex flex-col gap-2 normal-case">
+                <button onClick={()=> handleAction("video")} className="btn bg-[#f8fafc] hover:bg-gray-100 border-none rounded-2xl h-24 flex flex-col gap-2 normal-case">
                   <HiOutlineVideoCamera className="text-3xl text-gray-600" />
                   <span className="text-gray-700">Video</span>
                 </button>
