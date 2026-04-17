@@ -1,21 +1,19 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import {
-  HiOutlineHome,
-  HiOutlineClock,
-} from "react-icons/hi";
+import { HiOutlineHome, HiOutlineClock } from "react-icons/hi";
 import { ImStatsDots } from "react-icons/im";
 import { CgMenu } from "react-icons/cg";
-import image from '../../assets/logo.png';
+// @ts-ignore
+import image from "../../assets/logo.png";
 
 const Navbar = () => {
-const closeDrawer = () => {
-  const drawer = document.getElementById("my-drawer");
-  if (drawer) {
-    // @ts-ignore
-    drawer.checked = false;
-  }
-};
+  const closeDrawer = () => {
+    const drawer = document.getElementById("my-drawer");
+    if (drawer) {
+      // @ts-ignore
+      drawer.checked = false;
+    }
+  };
   const navLinks = (
     <>
       <li>
