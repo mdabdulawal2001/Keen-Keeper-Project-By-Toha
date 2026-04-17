@@ -6,6 +6,7 @@ import {
 } from "react-icons/hi";
 import { ImStatsDots } from "react-icons/im";
 import { CgMenu } from "react-icons/cg";
+import image from '../../assets/logo.png'
 
 const Navbar = () => {
 const closeDrawer = () => {
@@ -73,22 +74,23 @@ const closeDrawer = () => {
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full navbar bg-white px-4 md:px-10 border-gray-100 min-h-20">
+        <div className="w-full navbar bg-white px-0 md:px-10 border-gray-100 min-h-20">
           {/* left part */}
           <div className="flex-1 px-2 mx-2 text-3xl font-bold tracking-tight">
-            <Link to="/">
+            {/* <Link to="/">
               <span className="text-black">Keen</span>
               <span className="text-[#2D5243]">Keeper</span>
-            </Link>
+            </Link> */}
+            <img className="w-40 md:w-57" src={image} alt="" />
           </div>
 
           {/* right part */}
-          <div className="flex-none hidden md:block">
+          <div className="flex-none hidden lg:block">
             <ul className="menu menu-horizontal p-0 gap-3">{navLinks}</ul>
           </div>
 
           {/* Menu Icon */}
-          <div className="flex-none md:hidden">
+          <div className="flex-none lg:hidden">
             <label htmlFor="my-drawer" className="btn btn-ghost">
               <CgMenu className="text-2xl text-[#2D5243]" />
             </label>
