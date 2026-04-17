@@ -65,7 +65,7 @@ const FriendDetails = () => {
       <div className="bg-[#f7fdfb] min-h-screen py-10 px-4 md:px-10 font-sans">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-stretch gap-8">
           {/* --- Left Column: Profile & Actions --- */}
-          <div className="w-full lg:w-[350px] flex flex-col justify-between gap-6">
+          <div className="w-full lg:w-87.5 flex flex-col justify-between gap-6">
             {/* Profile Card */}
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col items-center text-center h-full">
               <div className="avatar mb-4">
@@ -156,7 +156,7 @@ const FriendDetails = () => {
               </div>
               <p className="text-gray-600">
                 Connect every{" "}
-                <span className="font-bold text-gray-800">30 days</span>
+                <span className="font-bold text-gray-800">{goal} days</span>
               </p>
             </div>
 

@@ -35,7 +35,7 @@ const StatsCard = () => {
 
   return (
     <div className="w-[95%] md:w-full max-w-4xl mx-auto mt-15">
-                    {/* TITLE */}
+      {/* title */}
         <h1 className="flex justify-center md:justify-start text-3xl font-bold text-gray-800 mb-4">
           Friendship Analytics
         </h1>
@@ -47,7 +47,7 @@ const StatsCard = () => {
         </p>
       </div>
 
-      <div className="h-40 md:h-75 w-full flex items-center justify-center">
+      <div className="h-75 w-full flex items-center justify-center">
         {hasData ? (
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>

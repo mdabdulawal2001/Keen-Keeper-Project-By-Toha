@@ -5,7 +5,6 @@ import FriendCard from "../../components/FriendCard/FriendCard";
 
 const Home = () => {
   const friendsData = useLoaderData();
-  console.log(friendsData);
 
   return (
     <div>
