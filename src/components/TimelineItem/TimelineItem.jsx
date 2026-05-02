@@ -96,7 +96,7 @@ const TimelineItem = () => {
 
   return (
     <div>
-      <section className="bg-[#f7fdfb] py-10 px-4 md:px-10 font-sans min-h-screen">
+      <section className="bg-[#f7fdfb] py-10 px-4 md:px-10 font-sans mb-4">
       <div className="max-w-4xl mx-auto flex flex-col gap-6">
 
         {/* title */}
